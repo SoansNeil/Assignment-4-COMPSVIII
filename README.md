@@ -42,18 +42,21 @@ Your task is to containerize this existing application using Docker. You need to
 
 ```bash
 
+docker build -t my-img .
 ```
 
 - To run your docker container in port 3000 run the command:
 
 ```bash
 
+docker run -p 3000:3000 my-img
 ```
 
 ## Reflection Question
 **Answer the following question in the space below**: How does containerization with Docker differ from using virtual machines, and why might a development team choose Docker containers over VMs for deploying applications like the one you just containerized?
 
 
+Containerization is different from using a virtual machine because it makes containers lighter and faster. Development teams might prefer docker because it can simplify deployment and ensure consistency within a cloud environment.
 
 ## Application Requirements for Docker
 
@@ -71,6 +74,11 @@ When your Docker container is running correctly:
 - Navigate to `http://localhost:3000` (or whatever port you mapped)
 - You should see a success page confirming containerization worked
 - The `/api/status` endpoint should return JSON status information
+
+![Docker Verification Page](images/img1.png)
+
+![Docker API Page](images/img2.png)
+
 
 ## Troubleshooting Tips
 
